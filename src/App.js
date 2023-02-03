@@ -5,7 +5,6 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import './assets/css/custom.css';
-import { useState } from 'react';
 import Service from './components/Service';
 import Modals from './components/Modals';
 function App() {

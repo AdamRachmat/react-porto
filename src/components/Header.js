@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import Eskacang from '../assets/images/Es Kacang Hijau.png';
 class Header extends React.Component{
     constructor(props){
         super(props);
@@ -13,7 +13,7 @@ class Header extends React.Component{
 render(){
     return (
     <section class="header">
-        <a href="index.html" class="logo"></a><img src="#" alt="" class="icon-website"></img>
+        <a href="index.html" class="logo"><img src={Eskacang} alt="" class="icon-website"></img></a>
         <nav className={this.state.isClassActive ? 'navbar '+'active' : 'navbar'}>
             <a href="index.html">Home</a>
             <a href="about.html">Profile</a>
