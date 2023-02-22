@@ -7,6 +7,7 @@ import Home from './components/Home';
 import './assets/css/custom.css';
 import Service from './components/Service';
 import Modals from './components/Modals';
+import Footer from './components/Footer';
 function App() {
   
   return (
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <Service/>
       <Modals/>
+      <Footer />
       </>
   );
 }

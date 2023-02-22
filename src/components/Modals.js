@@ -4,19 +4,20 @@ export default class Modals extends Component{
         constructor(){
         super();
         this.state={
+            jadwal:[],
             kota: '',
             data:[],
-            jadwal:[],
+            idKota:'',
             isLoaded:false
         };
+        
         };
         async handleChange(event){
             this.setState({kota: event.target.value});
         };
-        async handleKeyDown(event){
-            if(event.key==='Enter'){
+        async handleClick(){
                 const headers = {'Content-Type': 'application/json', 'Accept': 'application/json'};
-                const url = `https://api.myquran.com/v1/sholat/kota/cari/${this.handleChangeResult()}`;
+                const url = await `https://api.myquran.com/v1/sholat/kota/cari/${this.handleChangeResult()}`;
                 
                 await fetch(url,{headers})
                 .then(async response=>{
@@ -27,37 +28,30 @@ export default class Modals extends Component{
                     }
                     this.setState({data: dt.data});
                 })
+                .then (this.getIdkota())
                 .catch(error=>{
                     this.setState({data: error.toString()});
                     return ('Ada Kesalahan',error);
                 });
                 this.fetchJadwal();
-            }
         };
         async fetchJadwal(){
-                let requestOptions = {
-                    method:'GET',
-                    redirect:'follow'
-                }
-                const headers = {'Content-Type': 'application/json', 'Accept': 'application/json'};
-                const url = `https://api.myquran.com/v1/sholat/jadwal/1609/2021/06/23`;
-                
-                await fetch(url,{requestOptions})
+            const url = await `https://api.myquran.com/v1/sholat/jadwal/${this.state.idKota}/${this.getTodayDate()}`;
+            await fetch(url, {mode:'cors'})
                 .then(async response=>{
-                    const jd = await response.json();
+                    const dt = await response.json();
                     if(!response.ok){
-                        const error = (jd && jd.Message) || response.statusText;
+                        const error = (dt && dt.Message) || response.statusText;
                         return Promise.reject(error);
                     }
-                    this.setState({jadwal: jd.data});
+                    return this.setState({jadwal: (dt.data.jadwal)});
                 })
                 .catch(error=>{
                     this.setState({jadwal: error.toString()});
                     return ('Ada Kesalahan',error);
-                });
-
-                return(this.state.jadwal.toLowerCase());
-        }
+                });    
+                console.log(this.state.jadwal);
+    }
         handleChangeResult(){
             return(this.state.kota.toLowerCase());
         }
@@ -73,32 +67,28 @@ export default class Modals extends Component{
         };
         getIdkota(){
             let dataList = [];
-            let zero = 0;
             this.state.data.map((data, urutan) =>{
                 if(urutan === 0)
-                return dataList.push(JSON.parse(data.id))
+                dataList.push(data.id);
             })
-            return dataList.toString();
+            return this.setState({idKota: dataList.toString()});
         }
-        getJadwal(){
-            let jadwalList = [];
-            this.state.jadwal.map((data) =>{
-                return jadwalList.push((data.jadwal))
-            })
-            return jadwalList.toString();
+        setJadwal(){
+            return (this.state.jadwal);
         }
     render(){
+        
         return(
-            <section class="modals">
+<section class="modals">
     <div class="box-container">
         <div class="box">
-        
             <div class="popup" id="popup1">
                 <div class="popup-inner">
                     <p>Select Kota, {this.getTodayDate()}</p>
-                    <input type="text" class="input-kota" key="kota" placeholder="Input Here" value={this.state.kota} onKeyDown={this.handleKeyDown.bind(this)} onChange={this.handleChange.bind(this)}></input>
+                    <input type="text" class="input-kota" key="kota" placeholder="Input Here" value={this.state.kota} onChange={this.handleChange.bind(this)}></input>
                     <p>
-                        <p>From API My Quran Valid Till 2030 - {this.handleChangeResult()}</p>
+                        <p>From API My Quran Valid Till 2030 - {this.handleChangeResult()} - </p>
+                        <button href="#" class="" onClick={this.handleClick.bind(this)}>SUBMIT</button>
                         <table class="ibadah">
                             <tr>
                               <th>Pray</th>
@@ -107,26 +97,26 @@ export default class Modals extends Component{
                            
                             <tr>
                               <td>Subuh</td>
-                              <td>{this.getIdkota()}</td>
+                              <td>{this.setJadwal().subuh}</td>
                             </tr>
                             <tr>
                               <td>Dzuhur</td>
-                              <td>{this.getJadwal()}</td>
+                              <td>{this.setJadwal().dzuhur}</td>
                               
                             </tr>
                             <tr>
                               <td>Ashar</td>
-                              <td>Swanson</td>
+                              <td>{this.setJadwal().ashar}</td>
                               
                             </tr>
                             <tr>
                               <td>Magrib</td>
-                              <td>Brown</td>
+                              <td>{this.setJadwal().maghrib}</td>
                               
                             </tr>
                             <tr>
                                 <td>Isya</td>
-                                <td>Brown</td>
+                                <td>{this.setJadwal().isya}</td>
                                 
                               </tr>
                               
