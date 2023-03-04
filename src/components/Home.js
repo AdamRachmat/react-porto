@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Cendol from '../assets/images/cendolPixelart.png'
+import Cendol from '../assets/images/cendolPixelart.png';
 export default class Home extends Component{
     render(){
         return(

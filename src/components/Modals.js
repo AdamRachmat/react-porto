@@ -35,6 +35,7 @@ export default class Modals extends Component{
                 });
                 this.fetchJadwal();
         };
+       
         async fetchJadwal(){
             const url = await `https://api.myquran.com/v1/sholat/jadwal/${this.state.idKota}/${this.getTodayDate()}`;
             await fetch(url, {mode:'cors'})
@@ -55,10 +56,8 @@ export default class Modals extends Component{
         handleChangeResult(){
             return(this.state.kota.toLowerCase());
         }
-        async componentDidMount(){
-            
-        }
         
+
         getTodayDate(){
             let day = new Date().getDate();
             let month = new Date().getMonth()+1;
@@ -88,7 +87,7 @@ export default class Modals extends Component{
                     <input type="text" class="input-kota" key="kota" placeholder="Input Here" value={this.state.kota} onChange={this.handleChange.bind(this)}></input>
                     <p>
                         <p>From API My Quran Valid Till 2030 - {this.handleChangeResult()} - </p>
-                        <button href="#" class="" onClick={this.handleClick.bind(this)}>SUBMIT</button>
+                        <button href="#" class="btnone" onClick={this.handleClick.bind(this)}>SUBMIT</button>
                         <table class="ibadah">
                             <tr>
                               <th>Pray</th>
@@ -123,7 +122,7 @@ export default class Modals extends Component{
                           </table>
                           
                     </p>
-                    <a href="#" class="button">Close popup</a>
+                    <a href="#" class="button">close</a>
                 </div>
             </div>
             

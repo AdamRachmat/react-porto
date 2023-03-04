@@ -10,22 +10,22 @@ export default class Service extends Component{
             <i class="fa fa-calendar"></i>
             <h3>PrayerTimes</h3>
         </a>
-        <a href="#" class="box">
-            <i class="fa fa-tasks"></i>
-            <h3>Skills</h3>
+        <a href="https://discordapp.com/users/334701535671877633" class="box">
+            <i class="fab fa-discord"></i>
+            <h3>Discord</h3>
         </a>
-        <div class="box">
-            <a href="#"><i class="fa fa-graduation-cap"></i></a>
-            <h3>education</h3>
-        </div>
-         <div class="box">
-            <a href="#"><i class="fa fa-file-text"></i></a>
-            <h3>CV</h3>
-        </div>
-        <div class="box">
-            <a href="#"><i class="fab fa-deviantart"></i></a>
+        <a href="mailto:adambarata@gmail.com" class="box">
+            <a ><i class="fa fa-envelope"></i></a>
+            <h3>Contact me</h3>
+        </a>
+         <a href="https://www.linkedin.com/in/adam-rachmat/"class="box">
+            <i class="fab fa-linkedin"></i>
+            <h3>Linkedin</h3>
+        </a>
+        <a href="https://www.deviantart.com/envreddish" class="box">
+           <i class="fab fa-deviantart"></i>
             <h3>Deviantart</h3>
-        </div>
+        </a>
         </div>
 </section>
         )

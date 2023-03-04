@@ -15,10 +15,7 @@ render(){
     <section class="header">
         <a href="index.html" class="logo"><img src={Eskacang} alt="" class="icon-website"></img></a>
         <nav className={this.state.isClassActive ? 'navbar '+'active' : 'navbar'}>
-            <a href="index.html">Home</a>
-            <a href="about.html">Profile</a>
-            <a href="package.html">Github</a>
-            <a href="book.html">Project</a>
+            <a href="book.html">github</a>
         </nav>
         <div id="menu-btn" className={this.state.isClassActive ? 'fa fa-times' : 'fa fa-bars'} onClick={this.toggleClass}></div>
     </section>

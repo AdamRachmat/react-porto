@@ -55,6 +55,11 @@ html::-webkit-scrollbar-thumb{
     padding-bottom: 2rem;
     padding-top:.2rem;
 }
+.content{
+    padding: 1px 10%;
+    padding-top: .2rem;
+    padding-bottom: 1rem;
+}
 /* section service */
 .footer{ 
     padding: 120rem 10%;
@@ -199,7 +204,110 @@ text-decoration: none;
     text-align: center;
     font-size: 18px;
  }
-
+/* content */
+.content .box-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(10rem,2fr));
+    gap:1.5rem;
+    border:2px #12916f;
+    padding-top: 1rem;
+    
+ }
+ .content .box-container .box {
+    padding:1rem 1rem 1rem 1rem;
+    text-align: left;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+ }
+ .content .box-container .box .container{
+    width:100%;
+    background-color: #ddd;
+    border-radius: 30px;
+    margin-top: .5rem;
+ }
+ .content .box-container .box .skills{
+    text-align: right;
+    padding-top:1rem;
+    color:#12916f;
+    
+ }
+ .content .box-container .box p{
+    font-size: 11px;
+ }
+ .content .box-container .box .js{
+    width:75%;
+    background-color: #1ad15d;
+    border-radius: 30px;
+    
+ }
+ .content .box-container .box .php{
+    width:75%;
+    background-color: #421ad1;
+    border-radius: 30px;
+    
+ }
+ .content .box-container .box .golang{
+    width:50%;
+    background-color: #508dd3;
+    border-radius: 30px;
+    
+ }
+ .content .box-container .box .css{
+    width:80%;
+    background-color: #b9ebff;
+    border-radius: 30px;
+   
+ }
+ .content .box-container .box .bg-1{
+    width: 490px;
+    height: 165px;
+    border-radius: 20px;
+    z-index: -5;
+    position: relative;
+    object-fit:cover;
+ }
+ .content .box-container .box .input-qr{
+    margin-top: 5rem;
+    margin-left: 2rem;
+    position: absolute;
+    border-radius: 10px;
+    width: 20%;
+    z-index: 14;
+    color: #12916f;
+    font-size: 20px;
+    padding-left: 1rem;
+ }
+ .content .box-container .box .title-qr{
+    position: absolute;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    color: #000000;
+    text-shadow: 0px 1px #eee;
+    
+ }
+ .content .box-container .box .qrcode{
+    max-width: 200px;
+    position:absolute;
+    padding-top: 2rem;
+    padding-left: 30rem;
+    z-index: 4;
+ }
+ .content .box-container .box .b-qrcode button{
+    position: absolute;
+    margin-left: 4rem;
+    margin-top: 10rem;
+    background-color: #000302;
+    color: #fdfffe;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    border-radius: 20px;
+    font-size: 25px;
+    z-index:15;
+ }
+ .content .box-container .box .b-qrcode button:hover{
+    cursor:pointer;
+ }
  /* slider box */
 .slider{
     padding-bottom:5rem;
@@ -248,7 +356,7 @@ text-decoration: none;
 .modals .button {
 	display: inline-block;
 	padding: 10px 16px;
-	background-color: #B741EE;
+	background-color: #000000;
 	color: #FFF;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -274,10 +382,17 @@ text-decoration: none;
 	align-items: center;
 	padding: 10px;
 }
+.modals .popup .btnone{
+	background-color:#019c69;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+}
 
 .modals .popup-inner {
 	background-color: #FFF;
-	padding: 2rem 20rem;
+	padding: 2rem 10rem;
 	max-width: 1000px;
 	border-radius: 16px;
 	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
@@ -308,11 +423,11 @@ text-decoration: none;
     text-align: left;
     border-bottom: 1px solid rgb(0, 0, 0);
     color: #12916f;
-    font-size: 20px;
+    font-size: 15px;
     max-width: 1000px;
 }
 .input-kota{
-    width: 100%;
+    max-width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -320,7 +435,7 @@ text-decoration: none;
     border-color: rgb(0, 170, 37);
     background-color: #f1f1f1;
     border-radius: 20px;
-    font-size: 15px;
+    font-size: 13px;
   }
 
 /* modal end  */
@@ -394,6 +509,55 @@ text-decoration: none;
     section{
         padding:3rem 2rem;
     }
+    .content .box-container .box .bg-1{
+        border-radius: 20px;
+        object-fit: cover;
+        z-index: -5;
+        position: relative;
+        width: 350px;
+        height: 200px;
+     }
+     .content .box-container .box .input-qr{
+        margin-top: 4rem;
+        margin-left: 1rem;
+        position: absolute;
+        border-radius: 10px;
+        width: 23%;
+        z-index: 14;
+        color: #12916f;
+        font-size: 10px;
+        padding-left: 2rem;
+        padding-right:1rem;
+     }
+     .content .box-container .box .title-qr{
+        position: absolute;
+        padding-top: .5rem;
+        padding-left: 2rem;
+        color: #333333;
+        font-size: 15px;
+        max-width: 100%;
+        padding-bottom: 1rem;
+     }
+     .content .box-container .box .qrcode{
+        max-width: 50px;
+        max-height: 50px;
+        position:absolute;
+        padding-top: 11rem;
+        padding-left: 5rem;
+        z-index: 4;
+     }
+     .content .box-container .box .b-qrcode button{
+        position: absolute;
+        margin-left: 3rem;
+        margin-top: 7rem;
+        background-color: #019c69;
+        color: #fdfffe;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 20px;
+        z-index:14;
+        font-size: 14px;
+     }
 }
 
 @media (max-width:768px){
@@ -510,7 +674,7 @@ text-decoration: none;
         text-align: left;
         border-bottom: 1px solid rgb(0, 0, 0);
         color: #12916f;
-        font-size: 15px;
+        font-size: 10px;
         max-width: 500px;
     }
 
@@ -519,6 +683,55 @@ text-decoration: none;
         margin-left: 1px;
         position: fixed;
     }
+    .content .box-container .box .bg-1{
+        border-radius: 20px;
+        object-fit: cover;
+        z-index: -5;
+        position: relative;
+        width: 150px;
+        height: 170px;
+     }
+     .content .box-container .box .input-qr{
+        margin-top: 4rem;
+        margin-left: 1rem;
+        position: absolute;
+        border-radius: 10px;
+        width: 23%;
+        z-index: 14;
+        color: #12916f;
+        font-size: 10px;
+        padding-left: 2rem;
+        padding-right:1rem;
+     }
+     .content .box-container .box .title-qr{
+        position: absolute;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        color: #333333;
+        font-size: 10px;
+        max-width: 100px;
+        padding-bottom: 1rem;
+     }
+     .content .box-container .box .qrcode{
+        max-width: 50px;
+        max-height: 50px;
+        position:absolute;
+        padding-top: 11rem;
+        padding-left: 5rem;
+        z-index: 4;
+     }
+     .content .box-container .box .b-qrcode button{
+        position: absolute;
+        margin-left: 3rem;
+        margin-top: 7rem;
+        background-color: #019c69;
+        color: #fdfffe;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 20px;
+        z-index:14;
+        font-size: 14px;
+     }
     .footer{
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;

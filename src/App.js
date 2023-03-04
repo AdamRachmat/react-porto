@@ -8,6 +8,7 @@ import './assets/css/custom.css';
 import Service from './components/Service';
 import Modals from './components/Modals';
 import Footer from './components/Footer';
+import Content from './components/Content';
 function App() {
   
   return (
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Home />
       <Service/>
+      <Content/>
       <Modals/>
       <Footer />
       </>
