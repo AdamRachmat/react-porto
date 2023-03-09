@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-porto/static/css/main.0034f72f.css",
+    "main.js": "/react-porto/static/js/main.bd7bf7e7.js",
+    "static/js/787.c552e502.chunk.js": "/react-porto/static/js/787.c552e502.chunk.js",
+    "static/media/dddepth-311.jpg": "/react-porto/static/media/dddepth-311.bcab8aee518b7e1fe68f.jpg",
+    "static/media/cendolPixelart.png": "/react-porto/static/media/cendolPixelart.e8acb50927d75a3a3d3a.png",
+    "index.html": "/react-porto/index.html",
+    "main.0034f72f.css.map": "/react-porto/static/css/main.0034f72f.css.map",
+    "main.bd7bf7e7.js.map": "/react-porto/static/js/main.bd7bf7e7.js.map",
+    "787.c552e502.chunk.js.map": "/react-porto/static/js/787.c552e502.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0034f72f.css",
+    "static/js/main.bd7bf7e7.js"
+  ]
+}
