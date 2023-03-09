@@ -15,7 +15,7 @@ render(){
     <section class="header">
         <a href="index.html" class="logo"><img src={Eskacang} alt="" class="icon-website"></img></a>
         <nav className={this.state.isClassActive ? 'navbar '+'active' : 'navbar'}>
-            <a href="book.html">github</a>
+            <a href="https://github.com/AdamRachmat"><i class="fab fa-github"></i> github</a>
         </nav>
         <div id="menu-btn" className={this.state.isClassActive ? 'fa fa-times' : 'fa fa-bars'} onClick={this.toggleClass}></div>
     </section>

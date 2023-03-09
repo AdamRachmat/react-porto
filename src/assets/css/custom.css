@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600&display=swap');
 
 :root{
---main-color: #3fab4f;
+--main-color: #edfdef;
 --black: #222;
 --white: rgb(255, 255, 255);
 --light-black: #777;
@@ -11,7 +11,7 @@
 --border:.1rem solid var(--black);
 --box-shadow:.2rem .3rem 0.5rem rgba(0,0,0,.1);
 --text-shadow:.2rem 1.5rem 3rem rgba(0,0,0,.3);
---bg-color:#3f3830;
+--bg-color:#011b0b;
 }
 
 *{
@@ -21,7 +21,6 @@
     outline:none;
     border: none;
     text-decoration: none;
-    text-transform: lowercase;
     
 }
 html{
@@ -96,14 +95,14 @@ html::-webkit-scrollbar-thumb{
     color:var(--black);
     padding-bottom: 3rem;
 }
-.header .navbar a{
-font-size: 1.5rem;
-margin-left: 1.5rem;
-color: var(--black);
-border-bottom: var(--white);
-transition:  0.1s ;
-text-decoration: none;
-}
+    .header .navbar a{
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+    color: var(--black);
+    border-bottom: var(--white);
+    transition:  0.1s ;
+    text-decoration: none;
+    }
 
 .header .navbar a:hover{
     background-color: #12916f;
@@ -219,6 +218,19 @@ text-decoration: none;
     transition: 0.5s;
     color: rgb(0, 0, 0);
     border-radius: 20px;
+    padding-bottom: 5rem;
+ }
+ .content .box-container .box-content2{
+    padding:1rem 1rem 1rem 1rem;
+    text-align: left;
+    transition: 0.5s;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    padding-bottom: 5rem;
+    font-size: 15px;
+ }
+ .content .box-container .box-content2 i{
+    font-size: 20px;
  }
  .content .box-container .box .container{
     width:100%;
@@ -261,7 +273,7 @@ text-decoration: none;
  }
  .content .box-container .box .bg-1{
     width: 490px;
-    height: 165px;
+    height: 180px;
     border-radius: 20px;
     z-index: -5;
     position: relative;
@@ -282,8 +294,7 @@ text-decoration: none;
     position: absolute;
     padding-top: 1rem;
     padding-left: 2rem;
-    color: #000000;
-    text-shadow: 0px 1px #eee;
+    color: #242424;
     
  }
  .content .box-container .box .qrcode{
@@ -447,7 +458,7 @@ text-decoration: none;
     padding-top:1rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    padding-bottom: 20rem;
+    padding-bottom: 10rem;
     /* ganti gambar */
 }
 .footer .box-container{
@@ -517,6 +528,7 @@ text-decoration: none;
         width: 350px;
         height: 200px;
      }
+    
      .content .box-container .box .input-qr{
         margin-top: 4rem;
         margin-left: 1rem;
@@ -533,7 +545,7 @@ text-decoration: none;
         position: absolute;
         padding-top: .5rem;
         padding-left: 2rem;
-        color: #333333;
+        color: #ffffff;
         font-size: 15px;
         max-width: 100%;
         padding-bottom: 1rem;
@@ -644,9 +656,8 @@ text-decoration: none;
     }
 
     .modals .popup {
-        
-        top: -35%;
-        
+        top: -15%;  
+        font-size: 10px;      
     }
     
     .modals .popup-inner {
@@ -656,13 +667,13 @@ text-decoration: none;
     
     .modals .popup-inner h3 {
         color: #666;
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 16px;
         padding-top: 1px;
     }
     
     .modals .popup-inner p {
-        font-size: 10px;
+        font-size: 7px;
         top: 10%;
     }
     .modals .ibadah{
@@ -691,6 +702,15 @@ text-decoration: none;
         width: 150px;
         height: 170px;
      }
+     .content .box-container .box-content2{
+        font-size: 10px;
+     }
+     .content .box-container .box-content2 i{
+        font-size: 12px;
+     }
+     .content .box-container .box-content2 h1{
+        font-size: 14px;
+     }
      .content .box-container .box .input-qr{
         margin-top: 4rem;
         margin-left: 1rem;
@@ -707,7 +727,7 @@ text-decoration: none;
         position: absolute;
         padding-top: 1rem;
         padding-left: 2rem;
-        color: #333333;
+        color: #ffffff;
         font-size: 10px;
         max-width: 100px;
         padding-bottom: 1rem;

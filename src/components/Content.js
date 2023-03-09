@@ -33,23 +33,23 @@ export default class Content extends Component{
     <section class="content">
         <div class="box-container">
             <div class="box">
-            <h1>Programming Languages</h1>
-                <p>Golang</p>
+            <h1>Interest</h1>
+                <h2>Golang</h2>
                 <div class="container">
                 <div class="skills golang"></div>
                 </div>
 
-                <p>CSS</p>
+                <h2>CSS</h2>
                 <div class="container">
                 <div class="skills css"></div>
                 </div>
 
-                <p>JavaScript</p>
+                <h2>JavaScript</h2>
                 <div class="container">
                 <div class="skills js"></div>
                 </div>
 
-                <p>PHP</p>
+                <h2>PHP</h2>
                 <div class="container">
                 <div class="skills php"></div>
                 </div>
@@ -72,8 +72,21 @@ export default class Content extends Component{
             </div>
         </div>
         <div class="box-container">
-            <div class="box">
-                <h1>last content</h1>
+            <div class="box-content2">
+                <h1><i class="fa fa-cog"></i> Services</h1>
+                <p>Not just for frontend, i do development for backend too!
+                    Using php, or nodejs frameworks.
+                </p>
+            </div>
+            <div class="box-content2">
+                <h1><i class="fa fa-sitemap"></i> REST API</h1>
+                <p> For the backend services, im using REST API Architechture</p>
+            </div>
+            <div class="box-content2">
+                <h1>Frontend Frameworks</h1>
+                <p>Im using reactJS and now learning angular for future
+                    project
+                </p>
             </div>
         </div>
     </section>
